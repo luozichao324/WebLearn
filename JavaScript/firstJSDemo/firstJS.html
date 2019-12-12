@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>firstJS</title>
-    <script src="firstJS.js"></script>   
-
+    <!-- <script src="firstJS.js"></script>    -->
+    <script>
+            function displayHello()
+            {
+                x = document.getElementById("demo");
+                x.innerHTML = "hello JavaScript";
+                // 弹出警告信息
+                window.alert("Warning");   
+                //在debug console 打出日志
+                console.log("do function displayHello");
+                //向文件中写入数据
+                document.write(Date());
+            }
+    </script> 
 </head>
 <body>
     <h1>我的第一段js代码</h1>
