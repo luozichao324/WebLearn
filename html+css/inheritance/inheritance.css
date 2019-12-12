@@ -1,0 +1,15 @@
+p{
+    color:red;
+    border: 1px solid red;    /*不具备继承属性*/
+}
+p{                              /*重要性，权值最高*/
+    color:blue!important;
+
+}
+p{
+    color:peru;/*层叠，以最后为基准*/
+}
+#simple
+{
+    color:green;
+}

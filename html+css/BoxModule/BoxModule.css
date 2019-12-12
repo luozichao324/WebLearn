@@ -1,0 +1,32 @@
+
+/*不可用包含来写css*/
+.chinese li{   /*此处应是针对与chinese.li的box*/
+    border: 2px solid #ccc;
+    width:200px;  /* 内容的宽度*/
+    height:30px;  /* 内容的高度*/
+    
+    padding-top:20px;
+    padding-right:10px;
+    padding-bottom:15px;
+    padding-left:30px;
+}
+.chinese{
+    margin-bottom:200px;
+}
+#english li{         /*对象内的对象，不可用.指定， 空格即可*/
+    /* 底边框线 点线，宽1px 颜色#bbb*/
+    border-bottom: 1px dotted rgb(27, 23, 23);
+    /* 右边框线 虚线，宽1px， 颜色#aaa */
+    border-right: 2px dashed rgb(117, 27, 27);  
+    width:200px;  /* 内容的宽度*/
+    height:30px;  /* 内容的高度*/
+
+    /*可简写padding{20px 10px 15px 30px}*/
+    padding-top:20px;
+    padding-right:10px;
+    padding-bottom:15px;
+    padding-left:30px;
+
+
+}
+

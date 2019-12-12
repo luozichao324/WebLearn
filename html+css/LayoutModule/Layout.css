@@ -1,0 +1,36 @@
+.Flow_block{
+    border:2px dotted #c00;
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+.Float_block{
+    border:2px dotted #c00;
+    width: 300px;
+    height: 200px;
+    float: right;
+}
+.absolute{
+    border: 2px dotted #c00;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+#relative{
+    width:200px;
+    height:200px;
+	border:2px red solid;
+	position:relative;
+	left:100px;
+    top:50px;  
+}
+#fixed{
+    width:200px;
+    height:200px;
+	border:2px red solid;
+	position: fixed;
+	bottom:0;
+    right:0;  
+}
