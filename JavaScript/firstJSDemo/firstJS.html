@@ -7,24 +7,134 @@
     <title>firstJS</title>
     <!-- <script src="firstJS.js"></script>    -->
     <script>
+        "use strict"
             function displayHello()
             {
-                x = document.getElementById("demo");
-                x.innerHTML = "hello JavaScript";
+                // x = document.getElementById("demo");
+                // x.innerHTML = "hello JavaScript";
                 // 弹出警告信息
-                window.alert("Warning");   
-                //在debug console 打出日志
-                console.log("do function displayHello");
+                // window.alert("Warning");   
+                //在debug console 打出日志,您可以在文本字符串中使用反斜杠对代码行进行换行
+                console.log("do function \
+                displayHello"); 
                 //向文件中写入数据
-                document.write(Date());
+                // document.write(Date());
+                var judgeString ="b";
+                switch(judgeString)
+                {
+                    case "a":
+                        console.log("a");
+                        break;
+                    default:
+                        console.log("default");
+                        break;
+                
+                }
+
+                // cars=["BMW","Volvo","Saab","Ford"];
+                // list:{
+                //     document.getElementById("inputWord").write(cars[0] + "<br>"); 
+                //     document.getElementById("inputWord").write(cars[1] + "<br>"); 
+                //     document.getElementById("inputWord").write(cars[2] + "<br>"); 
+                //     break list;         //此处也有跳出的意思，跳出当前数据结构
+                //     document.getElementById("inputWord").write(cars[3] + "<br>"); 
+                //     document.getElementById("inputWord").write(cars[4] + "<br>"); 
+                //     document.getElementById("inputWord").write(cars[5] + "<br>"); 
+                // }
+              // console.log(list);
+               document.getElementById("inputWord").innerText="Hello world ";
+               document.getElementById("inputWord").append("please add new line word");
+            }
+            function changeDataType()
+            {
+
+                x = document.getElementById("demo");
+                var xValue = 10.1
+                console.log("String(xValue) = " + String(xValue));;
+                console.log("x.toString() = " + xValue.toString());
+                var num = 10.11000000000000000001;
+                console.log("num.toExponential() = " + num.toExponential());
+                var obj = new Date();
+                console.log("date is " + obj.toString());
+                console.log("String(new Date()) =" + String(new Date()));
+                console.log("false.toString() = " + false.toString());
+                console.log("Number\(\"10.22\"\) = " + Number("10.22"));
+                console.log("Number\(\"false\"\) = " + Number(false));
+                console.log("Number\(\"true\"\) = " + Number(true)); 
+                console.log("Number\(\"new Date\(\)\"\)" + Number(new Date())); 
+                var date = new Date();
+                console.log("getTime\(\) = "  + date.getTime()) ; 
+            }  
+            /**
+            *       正则表达式练习函数
+            **/
+            function DoRegularExpression()
+            {
+                var str = "Visit Runoob!"; 
+                var n = str.search(/Runoob/i);  
+                console.log("正则表达式匹配位置" +  n); 
+            } 
+
+            function displayDate()
+            {
+                 document.getElementById("date").innerHTML=Date();
+            }
+            function displayLeaveDemo()
+            {
+                document.getElementById("demo").innerHTML="leave demo element";
+            }
+            function avlidateForm()
+            {
+                var name = document.forms["Form"]["fname"].xValue;
+                if(name == null || name == undefined)
+                {
+                    alert("请输入姓名");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+
+            }
+            function invalidEmail()
+            {
+                var email = document.forms["Email"]["email"].value;
+                var emailCharactorPos = email.indexOf('@');
+                if(emailCharactorPos < 1 || emailCharactorPos > email.length)
+                {
+                    alert("这是一个无效的E-mail地址");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+                
             }
     </script> 
 </head>
 <body>
     <h1>我的第一段js代码</h1>
-    <p id="demo">JavaScript 能改变 HTML 元素的内容。</p>
+    <textarea id="inputWord" style="background-color: blanchedalmond; width:300px; height: 400px">请输入内容</textarea>
+    <p id="demo" onmouseout="displayLeaveDemo()">JavaScript 能改变 HTML 元素的内容。</p>
 
     <button type="button" onclick ="displayHello()">点击此处有惊喜</button>
+    <button type="button" ondblclick="changeDataType()">类型转换测试</button>
+    <p id="date">今天日期？</p>
+    <button onclick="displayDate()">今天日期</button>
+    <form action="demo_form.php" method="POST">      <!--action的地址，是将表单数据提交到action的文件去-->
+        <input type="text" name="fname" required="required">
+        <input type="submit" value="提交">
+    </form>
 
+    <form name="Form" action="demo_form.php" onsubmit="return avlidateForm()" method="POST">
+        姓名<input type="text" name="fname" value="姓名">
+        <input type="submit" value="提交">
+    </form>
+
+    <form name="Email" action="demo_form.php" onsubmit="return invalidEmail()" method="POST">
+        Email<input type="text" name="email">
+        <input type = "submit" value="提交">
+    </form>
+    
 </body>
 </html>

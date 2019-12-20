@@ -11,6 +11,6 @@
             "file": "${workspaceRoot}/JavaScript/firstJSDemo/firstJS.html",
            // "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
-        },
+        }
     ]
 }
