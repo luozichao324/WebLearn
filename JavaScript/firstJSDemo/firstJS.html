@@ -124,6 +124,42 @@
 
 
             }
+
+            function findMax() 
+            {    
+                var i, max = arguments[0];
+    
+                if(arguments.length < 2) return max;
+ 
+                for (i = 0; i < arguments.length; i++) {
+                   if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                alert("ｍａｘ number is " +　max.toString());
+
+                return max;
+            }
+
+            
+            function testOperation()
+            {
+                var person=new Object();
+                person.firstname="John";
+                person.lastname="Doe";
+                person.age=50;
+                person.eyecolor="blue";
+                for(var x in person)
+                {
+                    console.log(x);
+                    console.log(person[x].toString());
+                }
+            }
+
+            
+            
+            
+
     </script> 
 </head>
 <body>
@@ -151,6 +187,9 @@
     </form>
 
     <button type="button" onclick="testJSON()">测试ＪＳＯＮ</button>
+    <p id="testFindMax">测试findeMax</p>;
+    <button type="button" onclick="findMax(1, 20, 499, 29, 13)">测试最大值</button>
+    <button type="button" onclick="testOperation()">测试对象</button>
     
 </body>
 </html>
