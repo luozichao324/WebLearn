@@ -106,9 +106,23 @@
                     return false;
                 }
                 else{
-                    return true;
+                    return true;    
                 }
                 
+            }
+            /**
+                测试ＪＳＯＮ的ｊｓ的使用
+            **/
+            function testJSON()
+            {
+                var text = '{ "sites" : [{"name":"Runoob", "url":"www.runoob.com"}, {"name":"google", "url": "www.google.com"}, {"name":"Taobao", "url":"www.taobo.com"}]}';
+                var obj_ = JSON.parse(text);
+                
+                var jsonstr = JSON.stringify(obj_);
+                alert(obj_.sites[1].name + obj_.sites[1].url);
+                alert("从ＪＳＯＮ转换后的字符串：　"+ jsonstr);
+
+
             }
     </script> 
 </head>
@@ -135,6 +149,8 @@
         Email<input type="text" name="email">
         <input type = "submit" value="提交">
     </form>
+
+    <button type="button" onclick="testJSON()">测试ＪＳＯＮ</button>
     
 </body>
 </html>
